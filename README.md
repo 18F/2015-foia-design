@@ -1,13 +1,14 @@
-## foia-portal
+## foia-hub
 
-A user-facing portal for issuing FOI requests.
+A user-facing FOIA hub.
 
-The tentative plan for this repo is a static (HTML/CSS/JS) website whose first pass is to contain -
+Right now this is in *very rough prototype* phase, as we get some extremely basic request and search forms in place.
 
-* An interface for submitting a FOIA request, through [foia-core](https://github.com/18f/foia-core).
-* Low-fidelity (is it open or closed?) status checking for individual requests, also using [foia-core](https://github.com/18f/foia-core).
+### Running
 
-[foia-core](https://github.com/18f/foia-core) is where the actual service will reside that handles the request, and manages agency interaction.
+Install [`serve`](https://www.npmjs.org/package/serve), or some other tool that allows you to run an HTTP server over a directory of static files.
+
+Visit the [`prototype/`](prototype) directory and run `serve`.
 
 ## Public domain
 
