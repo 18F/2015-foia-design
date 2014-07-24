@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+  <title>FOIA Hub Prototype</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="/css/pure-min-0.5.0.css" />
+  <link rel="stylesheet" href="/css/main.css" />
+</head>
+<body>
+
+<h2>The Freedom of Information Act</h2>
+
+<p>
+  Get started requesting information under the Freedom of Information Act.
+</p>
+
+<section class="agency">
+  <p>
+    If you know the agency you want to request records from, start typing it below. Once you've located an agency, you can bookmark the page to return there any time.
+  </p>
+
+  <form class="agency pure-form" method="get" action="agency.html">
+    <input type="search" class="agency" name="agency" placeholder="Start typing the name of an agency..." value="General Services Administration" />
+  </form>
+</section>
+
+<section class="request">
+
+<p>
+  You can make your FOIA request to the General Services Administration right from here.
+</p>
+
+<p>
+  Please bear in mind:
+</p>
+
+<ul>
+  <li>You need to include your name and contact information to file a request.</li>
+  <li>FOIA requests are themselves public records, so do not include any unnecessary personal information.</li>
+  <li>You can only request records that already exist.</li>
+  <li>You may be contacted by a FOIA processing officer to help target and narrow your request to something they can fulfill.</li>
+</ul>
+
+<form class="pure-form" method="get" action="request-made.html">
+
+  <fieldset>
+    <legend>
+      You need to provide your name and a contact email address.
+    </legend>
+    <input type="text" placeholder="First name" />
+    <input type="text" placeholder="Last name" />
+    <input type="text" placeholder="Email address" />
+  </fieldset>
+
+  <fieldset>
+    <legend>Describe the records you are requesting.</legend>
+    <textarea class="request" name="body"></textarea>
+  </fieldset>
+
+  <fieldset>
+    I'll pay up to
+    $<input type="text" class="upto" name="upto" value="0" />
+    in request processing fees. If it's higher than that, stop and inform me before continuing.
+  </fieldset>
+
+  <input type="submit" class="pure-button pure-button-primary" value="Submit Request" />
+</form>
+
+</section>
+
+</body>
+</html>
