@@ -1,3 +1,5 @@
 body {padding: 0 30px;}
 
-input.search {width: 450px;}
+input.search, input.agency {width: 450px;}
+textarea.request {width: 450px; height: 100px;}
+input.upto {width: 80px;}
