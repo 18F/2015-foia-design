@@ -1,0 +1,4 @@
+todo.txt
+*.pyc
+.DS_Store
+_site
