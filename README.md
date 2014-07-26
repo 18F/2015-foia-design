@@ -6,9 +6,13 @@ Right now this is in *very rough prototype* phase, as we get some extremely basi
 
 ### Running
 
-Install [`serve`](https://www.npmjs.org/package/serve), or some other tool that allows you to run an HTTP server over a directory of static files.
+This is a [Jekyll](http://jekyllrb.com/) app, so `gem install jekyll` and then run:
 
-Visit the [`prototype/`](prototype) directory and run `serve`.
+```
+jekyll serve
+```
+
+To run the app at `http://localhost:4000`.
 
 ## Public domain
 
