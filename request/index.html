@@ -3,16 +3,45 @@ layout: default
 permalink: /request/
 ---
 
+<h2>
+  Request information through the FOIA
+</h2>
+
 <p>
-  Get started requesting information under the Freedom of Information Act.
+  The United States government is made up of many different <strong>federal agencies</strong>. To file a FOIA request, you need to choose the agency that has the information you're looking for, and request it directly from them.
 </p>
 
 <section class="agency">
   <p>
-    If you know the agency you want to request records from, start typing it below. Once you've located an agency, you can bookmark the page to return there any time.
+    If you know the agency you want to file a request with, type it in below, or <a href="/agencies/">choose from a list</a>.
   </p>
 
   <form class="agency pure-form" method="get" action="/agency/">
     <input type="search" class="agency" name="agency" placeholder="Start typing the name of an agency..." />
+  </form>
+</section>
+
+<section class="common">
+  <p>
+    You can choose from a list of common requests.
+  </p>
+
+  <h4>I'm looking for:</h4>
+  <ul class="common">
+    <li><a href="/requests/common/visa/">The status of my visa</a></li>
+    <li><a href="/requests/common/fbi/">My FBI file</a></li>
+    <li><a href="/requests/common/immigration/">My immigration status</a></li>
+    <li><a href="/requests/common/privacy/">Other information the government has about me</a></li>
+  </ul>
+</section>
+
+<section class="agencies">
+  <p>
+    If you're not sure where to get started, we'll try to help you find the right agency for your request.
+  </p>
+
+  <form class="agencies pure-form" method="Get" action="/search/agencies/">
+    <input type="search" class="agencies" name="query" placeholder="What type of information are you requesting?" />
+    <legend>(use keywords, not sentences)</legend>
   </form>
 </section>
