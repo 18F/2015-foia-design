@@ -1,62 +1,94 @@
 ---
 layout: default
-permalink: /agency/
+permalink: /agency/gsa/
 ---
 
-<p>
-  Get started requesting information under the Freedom of Information Act.
-</p>
+<h2>General Services Administration</h2>
 
 <section class="agency">
+
+  <img class="logo" src="/assets/images/logos/gsa.png" />
+
   <p>
-    If you know the agency you want to request records from, start typing it below. Once you've located an agency, you can bookmark the page to return there any time.
+    The General Services Administration (GSA) manages the government's buildings, property, and oversees a large number of government contracts.
   </p>
 
-  <form class="agency pure-form" method="get" action="/agency/">
-    <input type="search" class="agency" name="agency" placeholder="Start typing the name of an agency..." value="General Services Administration" />
-  </form>
+  <p>
+    Common FOIA requests from GSA include <strong>federal contracts</strong>, <strong>purchase card use</strong>, and <strong>government forms</strong>.
+  </p>
+
+  <p>
+    You may not need to make a FOIA request for the information you're looking for. The General Services Administration has:
+  </p>
+
+  <ul>
+    <li>
+      <a href="http://catalog.data.gov/organization/gsa-gov">public datasets catalogued on Data.gov</a>
+    </li>
+    <li>
+      <a href="/open/agencies/gsa/">public records already released through FOIA</a>
+    </li>
+  </ul>
+
+  <!--<form class="search pure-form" method="get" action="/agency/gsa/">
+    <input type="search" class="search" name="query" placeholder="Search GSA's data..." />
+    <input type="hidden" name="agency" value="gsa" />
+  </form>-->
+
 </section>
 
+<section class="prepare">
+  <h2>
+    Create a good request
+  </h2>
+
+  [TBD]
+
+</section>
+
+<!-- -->
 <section class="request">
 
-<p>
-  You can make your FOIA request to the General Services Administration right from here.
-</p>
+  <h2>File your request</h2>
 
-<p>
-  Please bear in mind:
-</p>
+  <p>
+    You can make your FOIA request to the General Services Administration right from here.
+  </p>
 
-<ul>
-  <li>You need to include your name and contact information to file a request.</li>
-  <li>FOIA requests are themselves public records, so do not include any unnecessary personal information.</li>
-  <li>You can only request records that already exist.</li>
-  <li>You may be contacted by a FOIA processing officer to help target and narrow your request to something they can fulfill.</li>
-</ul>
+  <p>
+    Please bear in mind:
+  </p>
 
-<form class="pure-form" method="get" action="/request-made/">
+  <ul>
+    <li>You need to include your name and contact information to file a request.</li>
+    <li>FOIA requests are themselves public records, so do not include any unnecessary personal information.</li>
+    <li>You can only request records that already exist.</li>
+    <li>You may be contacted by a FOIA processing officer to help target and narrow your request to something they can fulfill.</li>
+  </ul>
 
-  <fieldset>
-    <legend>
-      You need to provide your name and a contact email address.
-    </legend>
-    <input type="text" placeholder="First name" />
-    <input type="text" placeholder="Last name" />
-    <input type="text" placeholder="Email address" />
-  </fieldset>
+  <form class="pure-form" method="get" action="/request-made/">
 
-  <fieldset>
-    <legend>Describe the records you are requesting.</legend>
-    <textarea class="request" name="body"></textarea>
-  </fieldset>
+    <fieldset>
+      <legend>
+        You need to provide your name and a contact email address.
+      </legend>
+      <input type="text" placeholder="First name" />
+      <input type="text" placeholder="Last name" />
+      <input type="text" placeholder="Email address" />
+    </fieldset>
 
-  <fieldset>
-    I'll pay up to
-    $<input type="text" class="upto" name="upto" value="0" />
-    in request processing fees. If it's higher than that, stop and inform me before continuing.
-  </fieldset>
+    <fieldset>
+      <legend>Describe the records you are requesting.</legend>
+      <textarea class="request" name="body"></textarea>
+    </fieldset>
 
-  <input type="submit" class="pure-button pure-button-primary" value="Submit Request" />
-</form>
+    <fieldset>
+      I'll pay up to
+      $<input type="text" class="upto" name="upto" value="0" />
+      in request processing fees. If it's higher than that, stop and inform me before continuing.
+    </fieldset>
+
+    <input type="submit" class="pure-button pure-button-primary" value="Submit Request" />
+  </form>
 
 </section>
