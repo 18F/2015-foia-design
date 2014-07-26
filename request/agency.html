@@ -37,16 +37,17 @@ permalink: /agency/gsa/
 
 </section>
 
+<!--
 <section class="prepare">
   <h2>
-    Create a good request
+    Creating an effective request
   </h2>
 
   [TBD]
 
 </section>
+-->
 
-<!-- -->
 <section class="request">
 
   <h2>File your request</h2>
@@ -55,16 +56,11 @@ permalink: /agency/gsa/
     You can make your FOIA request to the General Services Administration right from here.
   </p>
 
+  <!--
   <p>
-    Please bear in mind:
+    Alternatively, you can file your request through <a href="https://foiaonline.regulations.gov/foia/action/public/request/createRequest">FOIAonline</a>, by <a href="mailto:gsa.foia@gsa.gov">emailing gsa.foia@gsa.gov</a>.
   </p>
-
-  <ul>
-    <li>You need to include your name and contact information to file a request.</li>
-    <li>FOIA requests are themselves public records, so do not include any unnecessary personal information.</li>
-    <li>You can only request records that already exist.</li>
-    <li>You may be contacted by a FOIA processing officer to help target and narrow your request to something they can fulfill.</li>
-  </ul>
+  -->
 
   <form class="pure-form" method="get" action="/request-made/">
 
@@ -83,9 +79,40 @@ permalink: /agency/gsa/
     </fieldset>
 
     <fieldset>
+      <legend>If your request relates to a specific GSA contract, enter the contract number. (optional)</legend>
+      GS-<input type="text" name="gsa[contract]" />
+    </fieldset>
+
+    <fieldset>
+      <legend>If your request relates to a specific GSA region, choose the region or choose your state. (optional)</legend>
+
+      <select name="gsa[region]">
+        <option value="" selected>GSA region</option>
+        <option value="1A">New England Region (1A)</option>
+        <option value="2A">Northeast and Caribbean Region (2A)</option>
+        <option value="3A">Mid-Atlantic Region (3A)</option>
+        <option value="4A">Southeast Sunbelt Region (4A)</option>
+        <option value="5A">Great Lakes Region (5A)</option>
+        <option value="6A">The Heartland Region (6A)</option>
+        <option value="7A">Greater Southwest Region (7A)</option>
+        <option value="8A">Rocky Mountain Region (8A)</option>
+        <option value="9A">Pacific Rim Region (9A)</option>
+        <option value="10A">Northwest/Arctic Region (10A)</option>
+        <option value="11A">National Capital Region (11A)</option>
+        <option value="Central">Central Office (00)</option>
+      </select>
+
+      <select name="gsa[state]">
+        <option value="" selected>State (optional)</option>
+        <option value="AK">Alaska</option>
+        <option value="...">...</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
       I'll pay up to
       $<input type="text" class="upto" name="upto" value="0" />
-      in request processing fees. If it's higher than that, stop and inform me before continuing.
+      in request processing fees. If it's higher than <span class="fee-amount">$0</span>, stop and inform me before continuing.
     </fieldset>
 
     <input type="submit" class="pure-button pure-button-primary" value="Submit Request" />
