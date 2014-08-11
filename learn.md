@@ -19,7 +19,7 @@ You can file a FOIA request for any "agency record." This is a broad term that c
 
 **Is there a special form I have to use to make a FOIA request?**
 
-There is no specific form that must be used to make a request. All you need is to do is write a description of the information you are seeking and comply with any agency-specific requirements. Those requirements are set out in agencies' FOIA regulations. 
+There is no specific form that must be used to make a request. All you need is to do is write a description of the information you are seeking and comply with any agency-specific requirements. Those requirements are set out in agencies' FOIA regulations.
 
 Your written description must be specific enough that agency FOIA professionals can understand what you are seeking and properly conduct a search. Information such as time periods, specific names, topics, or key words related to the information you are seeking will help inform the agency.
 
@@ -39,7 +39,7 @@ Once the agency has completed this process, any public records will be released 
 
 Response time varies between agencies and also depends on the complexity of the request. The standard time limit established by FOIA is 20 business days, but some requests are more complex and will require more time.
 
-Agencies may also request an extension in "unusual" or "exceptional" circumstances and may pause the request clock to [clarify the request] (http://www.justice.gov/oip/foiapost/2008foiapost29.htm). If an agency gets an extension, it will notify you. During this time, the agency will provide you with an opportunity to modify the scope of the request to help improve the response time.
+Agencies may also request an extension in "unusual" or "exceptional" circumstances and may pause the request clock to [clarify the request](http://www.justice.gov/oip/foiapost/2008foiapost29.htm). If an agency gets an extension, it will notify you. During this time, the agency will provide you with an opportunity to modify the scope of the request to help improve the response time.
 
 Another option is to agree to a different timetable for processing the request. You can work with the agency's FOIA Public Liaison or other FOIA contacts to discuss this option. You should always feel free to contact the agency to check on the status of your request. Agencies are required to provide an estimated response date upon request.
 
@@ -47,7 +47,7 @@ Another option is to agree to a different timetable for processing the request. 
 
 If you disagree with agency's decision on your request, you can file an appeal by writing to the agency. Agencies review appeals independently and inform you whether your appeal is granted or denied. FOIA also provides for a 20 business day time frame for appeal responses, but, similarly, response times vary based on an agency's workload and the complexity of your appeal.
 
-Sometimes an appeal isn't the best route. Before filing an appeal, you might want to try contacting the agency that handled the request either through your FOIA contact or the FOIA Public Liaison who is there to help you throughout the FOIA process and help resolve any disputes. Contact for every agency's FOIA Public Liaison is listed on [www.foia.gov] (http://www.foia.gov/report-makerequest.html).
+Sometimes an appeal isn't the best route. Before filing an appeal, you might want to try contacting the agency that handled the request either through your FOIA contact or the FOIA Public Liaison who is there to help you throughout the FOIA process and help resolve any disputes. Contact for every agency's FOIA Public Liaison is listed on [www.foia.gov](http://www.foia.gov/report-makerequest.html).
 
 If the appeal process is complete and you are not yet satisfied, you can also seek mediation services from the FOIA Ombudsman's office, the [Office of Government Information Services](https://ogis.archives.gov/) at the National Archives and Records Administration.
 
