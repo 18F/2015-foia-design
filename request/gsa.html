@@ -49,11 +49,11 @@ permalink: /request/general-services-administration/
     </fieldset>
 
     <fieldset>
-      <legend>Document Date Start (optional)</legend>
-      <input type="text" class="document_start" name="document_start" placeholder="Click to select" />
+      <label for="document_start">Document Date Start (optional)</label>
+      <input type="text" id="document_start" name="document_start" placeholder="Click to select" />
 
-      <legend>Document Date End (optional)</legend>
-      <input type="text" class="document_end" name="document_end" placeholder="Click to select" />
+      <label for="document_end">Document Date End (optional)</label>
+      <input type="text" id="document_end" name="document_end" placeholder="Click to select" />
     </fieldset>
 
     <fieldset>
@@ -130,7 +130,7 @@ $("form.request").submit(onRequestSuccess);
 <link rel="stylesheet" type="text/css" href="/assets/pickadate/classic.date.css" />
 
 <script>
-  $(".document_end, .document_start").pickadate({
+  $("#document_end, #document_start").pickadate({
     format: 'mmmm d, yyyy'
   });
 </script>
