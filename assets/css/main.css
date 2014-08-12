@@ -1,5 +1,9 @@
-body {padding: 0 30px;}
-
+body {padding: 0 30px; font-family: 'Open Sans', sans-serif;}
+h1,h2,h3,h4,h5,h6 {font-family: 'Raleway', sans-serif;}
 input.search, input.agency {width: 450px;}
 textarea.request {width: 450px; height: 100px;}
 input.upto {width: 80px;}
+a { color: #18f; text-decoration: none;}
+
+
+#logo { font-weight:200; color: #18f; }

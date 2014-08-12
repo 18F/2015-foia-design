@@ -8,9 +8,11 @@
 
   <link rel="stylesheet" href="/assets/css/pure-min-0.5.0.css" />
   <link rel="stylesheet" href="/assets/css/main.css?{{ site.time | date: "%Y%m%j%H%M%S" }}" />
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,300|Raleway:400,300,700,600' rel='stylesheet' />
 
-  <script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
-  <script type="text/javascript" src="/assets/js/main.js?{{ site.time | date: "%Y%m%j%H%M%S" }}"></script>
+  <script src="/assets/js/jquery-2.1.1.min.js"></script>
+  <script src="/assets/js/main.js?{{ site.time | date: "%Y%m%j%H%M%S" }}"></script>
+
 </head>
 <body>
 
@@ -23,7 +25,7 @@
 </nav>
 
 <header>
-  <h1>alpha.<strong>foia</strong>.gov</h1>
+  <h1 id="logo">alpha.<em><strong>foia</strong>.gov</span></em></h1>
 </header>
 
 {{ content }}
