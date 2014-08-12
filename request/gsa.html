@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /agency/gsa/
+permalink: /request/gsa/
 ---
 
 <h2>General Services Administration</h2>
@@ -28,11 +28,6 @@ permalink: /agency/gsa/
     </li>
   </ul> -->
 
-  <!--<form class="search pure-form" method="get" action="/agency/gsa/">
-    <input type="search" class="search" name="query" placeholder="Search GSA's data..." />
-    <input type="hidden" name="agency" value="gsa" />
-  </form>-->
-
 </section>
 
 <section class="request">
@@ -40,28 +35,33 @@ permalink: /agency/gsa/
   <form class="pure-form" method="get" action="/request-made/">
 
     <fieldset>
-      <!-- <legend>
-        You need to provide your name and a contact email address.
-      </legend> -->
-      <input type="text" placeholder="First name" />
-      <input type="text" placeholder="Last name" />
-      <input type="text" placeholder="Email address" />
+      <input type="text" placeholder="First name" name="first_name" />
+      <input type="text" placeholder="Last name" name="last_name" />
+      <input type="text" placeholder="Email address" name="email" />
     </fieldset>
 
     <fieldset>
-      <legend>Describe the records you are requesting.</legend>
+      <legend>Describe the records you are requesting</legend>
       <textarea class="request" name="body"></textarea>
     </fieldset>
 
     <fieldset>
+      <legend>Document Date Start (optional)</legend>
+      <input type="text" name="document_start" placeholder="MM/DD/YYYY" />
+
+      <legend>Document Date End (optional)</legend>
+      <input type="text" name="document_end" placeholder="MM/DD/YYYY" />
+    </fieldset>
+
+    <fieldset>
       <legend>If your request relates to a specific GSA contract, enter the contract number. (optional)</legend>
-      GS-<input type="text" name="gsa[contract]" />
+      GS-<input type="text" name="agency[contract]" />
     </fieldset>
 
     <fieldset>
       <legend>If your request relates to a specific GSA region, choose the region or choose your state. (optional)</legend>
 
-      <select name="gsa[region]">
+      <select name="agency[region]">
         <option value="" selected>GSA region</option>
         <option value="1A">New England Region (1A)</option>
         <option value="2A">Northeast and Caribbean Region (2A)</option>
@@ -77,7 +77,7 @@ permalink: /agency/gsa/
         <option value="Central">Central Office (00)</option>
       </select>
 
-      <select name="gsa[state]">
+      <select name="agency[state]">
         <option value="" selected>State (optional)</option>
         <option value="AK">Alaska</option>
         <option value="...">...</option>
@@ -89,6 +89,8 @@ permalink: /agency/gsa/
       $<input type="text" class="upto" name="upto" value="0" />
       in request processing fees. If it's higher than <span class="fee-amount">$0</span>, stop and inform me before continuing.
     </fieldset>
+
+    <input type="hidden" name="slug" value="general-services-administration" />
 
     <input type="submit" class="pure-button pure-button-primary" value="Submit Request" />
   </form>
