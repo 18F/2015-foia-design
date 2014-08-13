@@ -3,7 +3,7 @@ layout: contained
 permalink: /learn/
 ---
 
-**What is FOIA?**
+# What is FOIA?
 
 Since 1966, the Freedom of Information Act (FOIA) has granted the public the right to request access to any agency records. Under FOIA, agencies are required to disclose any information requested unless it falls under a specific set of [exemptions](http://www.foia.gov/faq.html#exemptions) or [exclusions](http://www.foia.gov/faq.html#exclusions).
 
