@@ -30,7 +30,7 @@ span.fee-amount { font-weight: bold; }
 
 /* error message next to submit button */
 div.request.error {
-  display: none; padding: 10px;
+  display: none; padding: 10px 0;
   font-weight: bold; color: #f00;
 }
 
