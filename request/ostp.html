@@ -1,0 +1,73 @@
+---
+layout: default
+slug: office-of-science-and-technology-policy
+permalink: /request/office-of-science-and-technology-policy/
+---
+
+<div class="content pure-g">
+
+<header class="pure-u-1">
+  <h2>Office of Science and Technology Policy</h2>
+</header>
+
+<section class="request agency pure-u-1">
+  <p>
+    The mission of the Office of Science and Technology Policy (OSTP) is threefold; first, to provide the President and his senior staff with accurate, relevant, and timely scientific and technical advice on all matters of consequence; second, to ensure that the policies of the Executive Branch are informed by sound science; and third, to ensure that the scientific and technical work of the Executive Branch is properly coordinated so as to provide the greatest benefit to society.
+  </p>
+
+</section>
+
+<!-- request form, shown by default -->
+
+<section class="request form pure-u-1">
+
+  <form class="request pure-form" method="get" action="#">
+    <input type="hidden" class="agency_agency" name="agency" value="office-of-science-and-technology-policy" />
+    <input type="hidden" class="agency_office" name="office" value="office-of-science-and-technology-policy" />
+    <input type="hidden" class="agency_name" name="agency_name" value="Office of Science and Technology Policy" />
+
+    {% include request/basic.html %}
+
+    <!-- no agency-specific fields -->
+
+    {% include request/fees.html %}
+
+    <div class="request error">
+      There was an error submitting your request. Please fill out all the required fields above, and try again.
+    </div>
+
+    <input type="submit" class="pure-button pure-button-primary" value="Submit Request" />
+  </form>
+
+</section>
+
+<!-- hidden by default, request success -->
+<section class="request success pure-u-1">
+  <h3>
+    You've successfully submitted your request!
+  </h3>
+
+  <p>
+    We've emailed a copy of your request to <a id="requester-email"></a>.
+  </p>
+
+  <p>
+    Your request's tracking ID is <span id="tracking-number"></span>.
+  </p>
+
+  <p>
+    You should receive a status update from the <span class="agency-name"></span> by email within 20 working days.
+  </p>
+
+  <p>
+    To reach the FOIA office of the <span class="agency-name"></span> directly, contact:
+
+    <blockquote>
+      Rachael Leonard<br/>
+      (202) 456-6125<br/>
+    </blockquote>
+  </p>
+</section>
+</div>
+
+{% include request/script.html %}
