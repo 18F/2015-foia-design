@@ -6,10 +6,8 @@ a { color: #18f; text-decoration: none;}
 .pure-menu a, .pure-menu .pure-menu-can-have-children>li:after { color: #333; }
 .pure-menu li a { padding: 5px 12px; }
 
-
 #logo { font-weight:200; color: #18f; }
 #logo em { color: #cc2211; font-style: normal;}
-
 
 input.search, input.agency { width: 100% }
 textarea.request { height: 9em; }
