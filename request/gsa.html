@@ -95,11 +95,11 @@ permalink: /request/general-services-administration/
       in request processing fees. If it's higher than <span class="fee-amount">$0</span>, stop and inform me before continuing.
     </fieldset>
 
-    <input type="submit" class="pure-button pure-button-primary" value="Submit Request" />
-
     <div class="request error">
       There was an error submitting your request. Please fill out all the required fields above, and try again.
     </div>
+
+    <input type="submit" class="pure-button pure-button-primary" value="Submit Request" />
   </form>
 
 </section>
@@ -154,11 +154,13 @@ var onRequestSuccess = function() {
 
 var onRequestFailure = function() {
 
+  $(".request.error").show();
+
   return false;
 };
 
 // TODO: have this POST to foia-core, and make the above request callbacks
-$("form.request").submit(onRequestSuccess);
+$("form.request").submit(onRequestFailure);
 
 
 // date chooser
