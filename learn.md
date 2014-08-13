@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: contained
 permalink: /learn/
 ---
 
@@ -50,4 +50,3 @@ If you disagree with agency's decision on your request, you can file an appeal b
 Sometimes an appeal isn't the best route. Before filing an appeal, you might want to try contacting the agency that handled the request either through your FOIA contact or the FOIA Public Liaison who is there to help you throughout the FOIA process and help resolve any disputes. Contact for every agency's FOIA Public Liaison is listed on [www.foia.gov](http://www.foia.gov/report-makerequest.html).
 
 If the appeal process is complete and you are not yet satisfied, you can also seek mediation services from the FOIA Ombudsman's office, the [Office of Government Information Services](https://ogis.archives.gov/) at the National Archives and Records Administration.
-

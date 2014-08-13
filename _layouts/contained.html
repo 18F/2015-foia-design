@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+  <title>alpha.FOIA.gov > Freedom of Information Act</title>
+
+  <meta charset='utf-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="/assets/css/pure-min-0.5.0.css" />
+  <link rel="stylesheet" href="/assets/css/main.css?{{ site.time | date: "%Y%m%j%H%M%S" }}" />
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,300|Raleway:400,300,700,600' rel='stylesheet' />
+
+  <script src="/assets/js/jquery-2.1.1.min.js"></script>
+  <script src="/assets/js/main.js?{{ site.time | date: "%Y%m%j%H%M%S" }}"></script>
+
+  <!-- pickadate: can get moved to only request page later -->
+  <script src="/assets/pickadate/picker.js"></script>
+  <script src="/assets/pickadate/picker.date.js"></script>
+  <link rel="stylesheet" type="text/css" href="/assets/pickadate/classic.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/pickadate/classic.date.css" />
+  <!--[if lte IE 8]>
+      <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+      <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+  <!--<![endif]-->
+</head>
+<body>
+
+<nav class="content pure-menu pure-menu-open pure-menu-horizontal">
+  <ul>
+    <li class="pure-menu-selected"><a href="/">Home</a></li>
+    <li><a href="/request">Request</a></li>
+    <li><a href="/learn">What is FOIA?</a></li>
+  </ul>
+</nav>
+
+<div id="main">
+  <div class="content pure-g">
+    <header class="pure-u-1">
+      <h1 id="logo"><a href="/">alpha.<em><strong>foia</strong>.gov</span></em></a></h1>
+    </header>
+  </div>
+
+<div class="content pure-g">
+  <div class="pure-u-1">
+  {{ content }}
+</div>
+
+</div><!--main-->
+
+</body>
+</html>
