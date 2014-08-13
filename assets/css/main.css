@@ -1,11 +1,16 @@
-body {padding: 0 30px; font-family: 'Open Sans', sans-serif;}
-h1,h2,h3,h4,h5,h6 {font-family: 'Raleway', sans-serif;}
-input.search, input.agency {width: 450px;}
-textarea.request {width: 450px; height: 100px;}
-input.upto {width: 80px;}
-span.fee-amount {font-weight: bold;}
+body { padding: 0 30px; }
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] { font-family: 'Open Sans', sans-serif; }
+h1,h2,h3,h4,h5,h6 { font-family: 'Raleway', sans-serif; }
 a { color: #18f; text-decoration: none;}
+.pure-menu a, .pure-menu .pure-menu-can-have-children>li:after { color: #333; }
 
 
 #logo { font-weight:200; color: #18f; }
 #logo em { color: #cc2211; font-style: normal;}
+
+
+input.search, input.agency { width: 450px; }
+textarea.request { width: 450px; height: 100px; }
+input.upto { width: 80px; }
+span.fee-amount { font-weight: bold; }
