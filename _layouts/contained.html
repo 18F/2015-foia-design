@@ -1,29 +1,7 @@
 <!doctype html>
 <html>
 <head>
-  <title>alpha.FOIA.gov > Freedom of Information Act</title>
-
-  <meta charset='utf-8'>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" href="/assets/css/pure-min-0.5.0.css" />
-  <link rel="stylesheet" href="/assets/css/main.css?{{ site.time | date: "%Y%m%j%H%M%S" }}" />
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,300|Raleway:400,300,700,600' rel='stylesheet' />
-
-  <script src="/assets/js/jquery-2.1.1.min.js"></script>
-  <script src="/assets/js/main.js?{{ site.time | date: "%Y%m%j%H%M%S" }}"></script>
-
-  <!-- pickadate: can get moved to only request page later -->
-  <script src="/assets/pickadate/picker.js"></script>
-  <script src="/assets/pickadate/picker.date.js"></script>
-  <link rel="stylesheet" type="text/css" href="/assets/pickadate/classic.css" />
-  <link rel="stylesheet" type="text/css" href="/assets/pickadate/classic.date.css" />
-  <!--[if lte IE 8]>
-      <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-old-ie-min.css">
-  <![endif]-->
-  <!--[if gt IE 8]><!-->
-      <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
-  <!--<![endif]-->
+  {% include head.html %}
 </head>
 <body>
 
@@ -42,7 +20,7 @@
     </div>
   </div>
 
-</div><!--main-->
+</div>
 
 </body>
 </html>
