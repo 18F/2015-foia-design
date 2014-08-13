@@ -38,8 +38,9 @@ permalink: /request/general-services-administration/
 <section class="request form pure-u-1">
 
   <form class="request pure-form" method="get" action="#">
-    <input type="hidden" name="agency" value="general-services-administration" />
-    <input type="hidden" name="office" value="headquarters" />
+    <input type="hidden" class="agency_agency" name="agency" value="general-services-administration" />
+    <input type="hidden" class="agency_office" name="office" value="headquarters" />
+    <input type="hidden" class="agency_name" name="agency_name" value="General Services Administration" />
 
     <fieldset>
       <input type="text" placeholder="First name" name="first_name" class="first_name" />
@@ -49,7 +50,7 @@ permalink: /request/general-services-administration/
 
     <fieldset>
       <legend>Describe the records you are requesting</legend>
-      <textarea class="request" class="body" name="body"></textarea>
+      <textarea class="request body" name="body"></textarea>
     </fieldset>
 
     <fieldset>
@@ -62,13 +63,13 @@ permalink: /request/general-services-administration/
 
     <fieldset>
       <legend>If your request relates to a specific GSA contract, enter the contract number. (optional)</legend>
-      GS-<input type="text" name="agency_fields.contract" />
+      GS-<input type="text" class="agency_fields_contract" name="agency_fields[contract]" />
     </fieldset>
 
     <fieldset>
       <legend>If your request relates to a specific GSA region, choose the region or choose your state. (optional)</legend>
 
-      <select name="agency_fields.region">
+      <select class="agency_fields_region" name="agency_fields[region]">
         <option value="" selected>-- GSA region --</option>
         <option value="1A">New England Region (1A)</option>
         <option value="2A">Northeast and Caribbean Region (2A)</option>
@@ -121,11 +122,11 @@ permalink: /request/general-services-administration/
   </p>
 
   <p>
-    You should receive a status update from the General Services Administration by email within 20 working days.
+    You should receive a status update from the <span class="agency-name"></span> by email within 20 working days.
   </p>
 
   <p>
-    To reach the FOIA office of the General Services Administration directly, contact:
+    To reach the FOIA office of the <span class="agency-name"></span> directly, contact:
 
     <blockquote>
       Audrey Corbett Brooks<br/>
@@ -143,9 +144,11 @@ var onRequestSuccess = function(data, status, xhr) {
 
   var tracking = "0000000" + data.tracking_id;
   var email = $(".email").val();
+  var agency_name = $(".agency_name").val();
 
   // insert values into success message
   $("#tracking-number").html(tracking);
+  $(".agency-name").html(agency_name);
   $("#requester-email").html(email).attr("href", "mailto:" + email);
 
   // show success form
@@ -164,20 +167,26 @@ var onRequestFailure = function(xhr, status, err) {
 };
 
 var collectRequestData = function() {
+  var fee_limit = parseInt($(".agency_name").val());
+  fee_limit = isNaN(fee_limit) ? 0 : fee_limit;
+
   return {
-    "first_name": "Eric",
-    "last_name": "Mill",
-    "email": "eric.mill@gsa.gov",
-    "body": "My request",
-    "documents_start": "August 6, 2014",
-    "documents_end": "August 8, 2014",
-    "fee_limit": 0,
-    "agency": "general-services-administration",
-    "office": "headquarters",
-    "agency_fields": {
-      "region": "1A",
-      "contract": "GS-1637848",
-    }
+    first_name: $(".first_name").val(),
+    last_name: $(".last_name").val(),
+    email: $(".email").val(),
+    body: $(".body").val(),
+
+    documents_start: $("#document_start").val(),
+    documents_end: $("#document_end").val(),
+    fee_limit: fee_limit,
+
+    agency_fields: {
+      region: $(".agency_fields_region").val(),
+      contract: $(".agency_fields_contract").val(),
+    },
+
+    agency: $(".agency_agency").val(),
+    office: $(".agency_office").val()
   };
 };
 
