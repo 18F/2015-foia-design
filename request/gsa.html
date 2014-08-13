@@ -54,7 +54,7 @@ permalink: /request/general-services-administration/
 
     <fieldset>
       <label for="document_start">Documents Date Start (optional)</label>
-      <input type="text" id="document_start" name="documents_start" placeholder="Click to select" />
+      <input type="text" id="document_start" name="documents_start" placeholder="Click to select" /><br />
 
       <label for="document_end">Documents Date End (optional)</label>
       <input type="text" id="document_end" name="documents_end" placeholder="Click to select" />
@@ -68,7 +68,7 @@ permalink: /request/general-services-administration/
     <fieldset>
       <legend>If your request relates to a specific GSA region, choose the region or choose your state. (optional)</legend>
 
-      <select name="agency_fields.region">
+      <select class="pure-u-1" name="agency_fields.region">
         <option value="" selected>-- GSA region --</option>
         <option value="1A">New England Region (1A)</option>
         <option value="2A">Northeast and Caribbean Region (2A)</option>
@@ -92,9 +92,22 @@ permalink: /request/general-services-administration/
     </fieldset>
 
     <fieldset>
+      <legend>Fees</legend>
       I'll pay up to
       $<input type="text" class="upto" name="fee_limit" value="0" />
       in request processing fees. If it's higher than <span class="fee-amount">$0</span>, stop and inform me before continuing.
+    </fieldset>
+
+    <fieldset>
+      <h4>Any FOIA requester may request that all fees associated with the request be waived.</h4>
+
+      <div data-role="fieldcontain">
+        <label for="fee-waiver-request">Request waiver: </label>
+        <input type="checkbox">
+      </div>
+
+      <p>Fee waiver justication <a href="#">(?)</a></p>
+      <textarea class="fee-waiver-justification pure-u-1" class="body" name="body"></textarea>
     </fieldset>
 
     <div class="request error">

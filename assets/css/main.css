@@ -13,6 +13,7 @@ a { color: #18f; text-decoration: none;}
 
 input.search, input.agency { width: 100% }
 textarea.request { height: 9em; }
+textarea.fee-waiver-justification  { height: 4em; }
 input.upto { /*width: 80px; */}
 span.fee-amount { font-weight: bold; }
 
