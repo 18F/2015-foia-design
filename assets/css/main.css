@@ -17,6 +17,7 @@ textarea.fee-waiver-justification  { height: 4em; }
 input.upto { /*width: 80px; */}
 span.fee-amount { font-weight: bold; }
 
+.pure-menu a {border-bottom: 0.3em solid #fff;}
 .pure-menu .pure-menu-selected a { border-bottom: 0.3em solid #333;}
 .pure-menu li a:hover {background: none; color: #777; border-bottom: 0.3em solid #777;}
 .pure-menu li a:focus {background: #cc2211; color:#fff; }
