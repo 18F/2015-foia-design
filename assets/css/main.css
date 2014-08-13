@@ -14,3 +14,20 @@ input.search, input.agency { width: 450px; }
 textarea.request { width: 450px; height: 100px; }
 input.upto { width: 80px; }
 span.fee-amount { font-weight: bold; }
+
+
+/* todo: error/success states still need styling */
+
+/* error message next to submit button */
+div.request.error {
+  display: none; padding: 10px;
+  font-weight: bold; color: #f00;
+}
+
+/* success message area, replaces request form upon success */
+section.request.success {
+  display: none;
+}
+
+#tracking-number {font-weight: bold;}
+#requester-email {font-weight: bold;}
