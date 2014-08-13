@@ -3,6 +3,7 @@ html, button, input, select, textarea,
 .pure-g [class *= "pure-u"] { font-family: 'Open Sans', sans-serif; }
 h1,h2,h3,h4,h5,h6 { font-family: 'Raleway', sans-serif; }
 a { color: #18f; text-decoration: none;}
+p a:hover { text-decoration: underline; }
 .pure-menu a, .pure-menu .pure-menu-can-have-children>li:after { color: #333; }
 .pure-menu li a { padding: 5px 12px; }
 
