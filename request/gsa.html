@@ -43,33 +43,33 @@ permalink: /request/general-services-administration/
     <input type="hidden" class="agency_name" name="agency_name" value="General Services Administration" />
 
     <fieldset>
-      <input type="text" placeholder="First name" name="first_name" class="first_name" />
-      <input type="text" placeholder="Last name" name="last_name" class="last_name" />
-      <input type="email" placeholder="Email address" name="email" class="email" />
+      <input type="text" placeholder="First name" name="first_name" class="first_name pure-u-1" />
+      <input type="text" placeholder="Last name" name="last_name" class="last_name pure-u-1" />
+      <input type="email" placeholder="Email address" name="email" class="email pure-u-1" />
     </fieldset>
 
     <fieldset>
       <legend>Describe the records you are requesting</legend>
-      <textarea class="request body" name="body"></textarea>
+      <textarea class="request body pure-u-1" class="body" name="body"></textarea>
     </fieldset>
 
     <fieldset>
-      <label for="document_start">Document Date Start (optional)</label>
-      <input type="text" id="document_start" name="documents_start" placeholder="Click to select" />
+      <label for="document_start">Documents Date Start (optional)</label>
+      <input type="text" id="document_start" name="documents_start" placeholder="Click to select" /><br />
 
-      <label for="document_end">Document Date End (optional)</label>
+      <label for="document_end">Documents Date End (optional)</label>
       <input type="text" id="document_end" name="documents_end" placeholder="Click to select" />
     </fieldset>
 
     <fieldset>
       <legend>If your request relates to a specific GSA contract, enter the contract number. (optional)</legend>
-      GS-<input type="text" class="agency_fields_contract" name="agency_fields[contract]" />
+      <input type="text" class="pure-u-1 agency_fields_contract" name="agency_fields[contract]" placeholder="GS-"/>
     </fieldset>
 
     <fieldset>
       <legend>If your request relates to a specific GSA region, choose the region or choose your state. (optional)</legend>
 
-      <select class="agency_fields_region" name="agency_fields[region]">
+      <select class="pure-u-1 agency_fields_region" name="agency_fields[region]">
         <option value="" selected>-- GSA region --</option>
         <option value="1A">New England Region (1A)</option>
         <option value="2A">Northeast and Caribbean Region (2A)</option>
@@ -93,9 +93,21 @@ permalink: /request/general-services-administration/
     </fieldset>
 
     <fieldset>
+      <legend>Fees</legend>
       I'll pay up to
       $<input type="text" class="upto" name="fee_limit" value="0" />
       in request processing fees. If it's higher than <span class="fee-amount">$0</span>, stop and inform me before continuing.
+    </fieldset>
+
+    <fieldset>
+      <h4>Any FOIA requester may request that all fees associated with the request be waived.</h4>
+
+      <div data-role="fieldcontain">
+        <label for="fee-waiver-request">Request waiver: </label><input type="checkbox">
+      </div>
+
+      <p>Fee waiver justication <a href="#">(?)</a></p>
+      <textarea class="fee-waiver-justification pure-u-1"></textarea>
     </fieldset>
 
     <div class="request error">
