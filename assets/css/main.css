@@ -44,3 +44,4 @@ section.request.success {
 
 #tracking-number {font-weight: bold;}
 #requester-email {font-weight: bold;}
+#fee-waiver-justification {display: none; margin: 10px 0;}

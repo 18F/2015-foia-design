@@ -100,14 +100,14 @@ permalink: /request/general-services-administration/
     </fieldset>
 
     <fieldset>
-      <h4>Any FOIA requester may request that all fees associated with the request be waived.</h4>
-
       <div data-role="fieldcontain">
-        <label for="fee-waiver-request">Request waiver: </label><input type="checkbox">
+        <input id="fee-waiver-request" type="checkbox" name="fee_waiver" />
+        <label for="fee-waiver-request">
+          I request that all fees associated with the request be waived.
+        </label>
       </div>
 
-      <p>Fee waiver justication <a href="#">(?)</a></p>
-      <textarea class="fee-waiver-justification pure-u-1"></textarea>
+      <textarea id="fee-waiver-justification" class="pure-u-1" placeholder="Fee waiver justification (required)"></textarea>
     </fieldset>
 
     <div class="request error">
@@ -229,7 +229,11 @@ var onchange = function() {
   var val = parseInt($upto.val());
   if (val && !isNaN(val)) $fee.html("$" + val);
 }
-
 $upto.keyup(onchange);
+
+// fee waiver toggle
+$("#fee-waiver-request").change(function() {
+  $("#fee-waiver-justification").toggle();
+})
 
 </script>
