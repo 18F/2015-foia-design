@@ -11,12 +11,14 @@ a { color: #18f; text-decoration: none;}
 #logo em { color: #cc2211; font-style: normal;}
 
 
-input.search, input.agency { width: 450px; }
-textarea.request { width: 450px; height: 100px; }
-input.upto { width: 80px; }
+input.search, input.agency { width: 100% }
+textarea.request { height: 9em; }
+input.upto { /*width: 80px; */}
 span.fee-amount { font-weight: bold; }
 
 .pure-menu .pure-menu-selected a { border-bottom: 0.3em solid #333;}
+.pure-menu li a:hover {background: none; color: #777; border-bottom: 0.3em solid #777;}
+.pure-menu li a:focus {background: #cc2211; color:#fff; }
 
 .content {
   margin-left: auto;
