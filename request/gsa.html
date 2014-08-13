@@ -131,7 +131,6 @@ var $upto = $(".upto");
 var $fee = $(".fee-amount");
 var onchange = function() {
   var val = parseInt($upto.val());
-  console.log(val);
   if (val && !isNaN(val)) $fee.html("$" + val);
 }
 
