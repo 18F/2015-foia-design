@@ -138,10 +138,10 @@ permalink: /request/general-services-administration/
 
 <script>
 
-var onRequestSuccess = function() {
+var onRequestSuccess = function(data, status, xhr) {
+  console.log("Success! Tracking: " + data.tracking_id);
 
-  // TODO: use response value from the API upon success
-  var tracking = "01298323874";
+  var tracking = "0000000" + data.tracking_id;
   var email = $(".email").val();
 
   // insert values into success message
@@ -155,15 +155,45 @@ var onRequestSuccess = function() {
   return false;
 };
 
-var onRequestFailure = function() {
+var onRequestFailure = function(xhr, status, err) {
+  window.arguments = arguments;
+  console.log("Failure.");
 
   $(".request.error").show();
-
   return false;
 };
 
-// TODO: have this POST to foia-core, and make the above request callbacks
-$("form.request").submit(onRequestFailure);
+var collectRequestData = function() {
+  return {
+    "first_name": "Eric",
+    "last_name": "Mill",
+    "email": "eric.mill@gsa.gov",
+    "body": "My request",
+    "documents_start": "August 6, 2014",
+    "documents_end": "August 8, 2014",
+    "fee_limit": 0,
+    "agency": "general-services-administration",
+    "office": "headquarters",
+    "agency_fields": {
+      "region": "1A",
+      "contract": "GS-1637848",
+    }
+  };
+};
+
+$("form.request").submit(function() {
+  var data = collectRequestData();
+
+  $.ajax({
+    type: "POST",
+    url: Env.core + "/api/request/",
+    data: JSON.stringify(data),
+    processData: false,
+    contentType: 'application/json'
+  }).done(onRequestSuccess).fail(onRequestFailure);
+
+  return false;
+});
 
 
 // date chooser
