@@ -1,3 +1,4 @@
+body { padding-bottom: 20px; }
 html, button, input, select, textarea,
 .pure-g [class *= "pure-u"] { font-family: 'Open Sans', sans-serif; }
 h1,h2,h3,h4,h5,h6 { font-family: 'Raleway', sans-serif; }
@@ -14,6 +15,7 @@ input.search, input.agency { width: 450px; }
 textarea.request { width: 450px; height: 100px; }
 input.upto { width: 80px; }
 span.fee-amount { font-weight: bold; }
+
 .pure-menu .pure-menu-selected a { border-bottom: 0.3em solid #333;}
 
 .content {
@@ -23,3 +25,19 @@ span.fee-amount { font-weight: bold; }
   padding-right: 1em;
   max-width: 768px;
 }
+
+/* todo: error/success states still need styling */
+
+/* error message next to submit button */
+div.request.error {
+  display: none; padding: 10px;
+  font-weight: bold; color: #f00;
+}
+
+/* success message area, replaces request form upon success */
+section.request.success {
+  display: none;
+}
+
+#tracking-number {font-weight: bold;}
+#requester-email {font-weight: bold;}

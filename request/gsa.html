@@ -11,6 +11,8 @@ permalink: /request/general-services-administration/
 
 <section class="request agency pure-u-1">
 
+  <h2>General Services Administration</h2>
+
   <p>
     The General Services Administration (GSA) helps manage and support the basic functioning of federal agencies. The GSA supplies products and communications for U.S. government offices, provides transportation and office space to federal employees, and develops government-wide cost-minimizing policies, and other management tasks.
   </p>
@@ -43,14 +45,14 @@ permalink: /request/general-services-administration/
     <input type="hidden" name="office" value="headquarters" />
 
     <fieldset>
-      <input type="text" placeholder="First name" name="first_name" />
-      <input type="text" placeholder="Last name" name="last_name" />
-      <input type="text" placeholder="Email address" name="email" />
+      <input type="text" placeholder="First name" name="first_name" class="first_name" />
+      <input type="text" placeholder="Last name" name="last_name" class="last_name" />
+      <input type="email" placeholder="Email address" name="email" class="email" />
     </fieldset>
 
     <fieldset>
       <legend>Describe the records you are requesting</legend>
-      <textarea class="request" name="body"></textarea>
+      <textarea class="request" class="body" name="body"></textarea>
     </fieldset>
 
     <fieldset>
@@ -63,14 +65,14 @@ permalink: /request/general-services-administration/
 
     <fieldset>
       <legend>If your request relates to a specific GSA contract, enter the contract number. (optional)</legend>
-      GS-<input type="text" name="agency_fields[contract]" />
+      GS-<input type="text" name="agency_fields.contract" />
     </fieldset>
 
     <fieldset>
       <legend>If your request relates to a specific GSA region, choose the region or choose your state. (optional)</legend>
 
-      <select name="agency_fields[region]">
-        <option value="" selected>GSA region</option>
+      <select name="agency_fields.region">
+        <option value="" selected>-- GSA region --</option>
         <option value="1A">New England Region (1A)</option>
         <option value="2A">Northeast and Caribbean Region (2A)</option>
         <option value="3A">Mid-Atlantic Region (3A)</option>
@@ -98,6 +100,10 @@ permalink: /request/general-services-administration/
       in request processing fees. If it's higher than <span class="fee-amount">$0</span>, stop and inform me before continuing.
     </fieldset>
 
+    <div class="request error">
+      There was an error submitting your request. Please fill out all the required fields above, and try again.
+    </div>
+
     <input type="submit" class="pure-button pure-button-primary" value="Submit Request" />
   </form>
 
@@ -105,7 +111,31 @@ permalink: /request/general-services-administration/
 
 <!-- hidden by default, request success -->
 <section class="request success pure-u-1">
+  <h3>
+    You've successfully submitted your request!
+  </h3>
 
+  <p>
+    We've emailed a copy of your request to <a id="requester-email"></a>.
+  </p>
+
+  <p>
+    Your request's tracking ID is <span id="tracking-number"></span>.
+  </p>
+
+  <p>
+    You should receive a status update from the General Services Administration by email within 20 working days.
+  </p>
+
+  <p>
+    To reach the FOIA office of the General Services Administration directly, contact:
+
+    <blockquote>
+      Audrey Corbett Brooks<br/>
+      (202) 205-5912<br/>
+      <a href="mailto:gsa.foia@gsa.gov">gsa.foia@gsa.gov</a>
+    </blockquote>
+  </p>
 </section>
 </div><!--/content-->
 
@@ -113,16 +143,30 @@ permalink: /request/general-services-administration/
 
 var onRequestSuccess = function() {
 
+  // TODO: use response value from the API upon success
+  var tracking = "01298323874";
+  var email = $(".email").val();
+
+  // insert values into success message
+  $("#tracking-number").html(tracking);
+  $("#requester-email").html(email).attr("href", "mailto:" + email);
+
+  // show success form
+  $(".request.form, .request.agency").hide();
+  $(".request.success").show();
+
   return false;
 };
 
 var onRequestFailure = function() {
 
+  $(".request.error").show();
+
   return false;
 };
 
 // TODO: have this POST to foia-core, and make the above request callbacks
-$("form.request").submit(onRequestSuccess);
+$("form.request").submit(onRequestFailure);
 
 
 // date chooser
