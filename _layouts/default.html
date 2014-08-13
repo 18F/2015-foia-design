@@ -18,23 +18,32 @@
   <script src="/assets/pickadate/picker.date.js"></script>
   <link rel="stylesheet" type="text/css" href="/assets/pickadate/classic.css" />
   <link rel="stylesheet" type="text/css" href="/assets/pickadate/classic.date.css" />
-
+  <!--[if lte IE 8]>
+      <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+      <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+  <!--<![endif]-->
 </head>
 <body>
 
-<nav class="pure-menu pure-menu-open pure-menu-horizontal">
+<nav class="content pure-menu pure-menu-open pure-menu-horizontal">
   <ul>
-    <li><a href="/">Home</a></li>
+    <li class="pure-menu-selected"><a href="/">Home</a></li>
     <li><a href="/request">Request</a></li>
     <li><a href="/learn">What is FOIA?</a></li>
   </ul>
 </nav>
 
-<header>
-  <h1 id="logo"><a href="/">alpha.<em><strong>foia</strong>.gov</span></em></a></h1>
-</header>
+<div id="main">
+  <div class="content pure-g">
+    <header class="pure-u-1">
+      <h1 id="logo"><a href="/">alpha.<em><strong>foia</strong>.gov</span></em></a></h1>
+    </header>
+  </div>
 
-{{ content }}
+  {{ content }}
+</div><!--main-->
 
 </body>
 </html>

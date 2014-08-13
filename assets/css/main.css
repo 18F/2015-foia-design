@@ -1,9 +1,9 @@
-body { padding: 0 30px; }
 html, button, input, select, textarea,
 .pure-g [class *= "pure-u"] { font-family: 'Open Sans', sans-serif; }
 h1,h2,h3,h4,h5,h6 { font-family: 'Raleway', sans-serif; }
 a { color: #18f; text-decoration: none;}
 .pure-menu a, .pure-menu .pure-menu-can-have-children>li:after { color: #333; }
+.pure-menu li a { padding: 5px 12px; }
 
 
 #logo { font-weight:200; color: #18f; }
@@ -14,3 +14,12 @@ input.search, input.agency { width: 450px; }
 textarea.request { width: 450px; height: 100px; }
 input.upto { width: 80px; }
 span.fee-amount { font-weight: bold; }
+.pure-menu .pure-menu-selected a { border-bottom: 0.3em solid #333;}
+
+.content {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+  max-width: 768px;
+}
