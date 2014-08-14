@@ -2,6 +2,7 @@
 layout: default
 permalink: /request/
 ---
+
 <div class="content pure-g">
 
 <section class="agency pure-u-1">
@@ -9,41 +10,44 @@ permalink: /request/
     What agency are you submitting a request to?
   </h2>
 
-  <!-- <p>
+  <p>
     The United States government is made up of many different <strong>federal agencies</strong>. To file a FOIA request, you need to choose the agency that has the information you're looking for, and request it directly from them.
-  </p> -->
-
-  <p>
-    If you don't know the name of the agency, you can enter relevant keywords to find it.
   </p>
 
-  <form class="agency pure-form" method="get" action="/request/general-services-administration/">
-    <input type="search" class="agency" name="agency" placeholder="Agency name or keywords" />
+  <form class="agency">
+    <div class="scrollable-dropdown-menu">
+      <input class="typeahead agency" type="text" placeholder="Agency name">
+    </div>
   </form>
 </section>
 
-<!-- <section class="common">
-  <p>
-    You can choose from a list of common requests.
-  </p>
-
-  <h4>I'm looking for:</h4>
-  <ul class="common">
-    <li><a href="/requests/common/visa/">The status of my visa</a></li>
-    <li><a href="/requests/common/fbi/">My FBI file</a></li>
-    <li><a href="/requests/common/immigration/">My immigration status</a></li>
-    <li><a href="/requests/common/privacy/">Other information the government has about me</a></li>
-  </ul>
-</section>
-
-<section class="agencies">
-  <p>
-    If you're not sure where to get started, we'll try to help you find the right agency for your request.
-  </p>
-
-  <form class="agencies pure-form" method="Get" action="/search/agencies/">
-    <input type="search" class="agencies" name="query" placeholder="What type of information are you requesting?" />
-    <legend>(use keywords, not sentences)</legend>
-  </form>
-</section> -->
 </div>
+
+<script src="/assets/js/typeahead.bundle.js"></script>
+<script src="/assets/data/agencies.js"></script>
+<script>
+
+var names = Agencies.names.sort();
+
+$('.scrollable-dropdown-menu .typeahead').typeahead({
+  hint: false,
+  highlight: true,
+  minLength: 1
+},
+{
+  name: 'agency_name',
+  displayKey: 'value',
+  source: Utils.substringMatcher(names)
+}).bind("typeahead:selected", function() {
+  window.arguments = arguments;
+  var name = arguments[1].value;
+  var slug = Agencies.by_name[name];
+  window.location = "/request/" + slug + "/";
+});
+
+// disable form submission
+$("form").submit(function() {return false});
+
+$("input.agency").focus();
+
+</script>
