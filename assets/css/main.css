@@ -107,7 +107,7 @@ section.request.success {
 }
 
 .tt-suggestion {
-  padding: 3px 20px;
+  padding: 8px 20px;
   font-size: 18px;
   line-height: 24px;
 }
@@ -115,7 +115,6 @@ section.request.success {
 .tt-suggestion.tt-cursor {
   color: #fff;
   background-color: #0097cf;
-
 }
 
 .tt-suggestion p {
