@@ -28,7 +28,7 @@ var onRequestFailure = function(xhr, status, err) {
 };
 
 var collectRequestData = function() {
-  var fee_limit = parseInt($(".agency_name").val());
+  var fee_limit = parseInt($(".upto").val());
   fee_limit = isNaN(fee_limit) ? 0 : fee_limit;
 
   return {
@@ -76,7 +76,8 @@ var $upto = $(".upto");
 var $fee = $(".fee-amount");
 var onchange = function() {
   var val = parseInt($upto.val());
-  if (val && !isNaN(val)) $fee.html("$" + val);
+  if (isNaN(val)) val = 0;
+  $fee.html("$" + val);
 }
 $upto.keyup(onchange);
 
