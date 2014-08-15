@@ -1,68 +1,48 @@
 ---
 layout: default
-permalink: /agency/gsa/
+slug: general-services-administration
+permalink: /request/general-services-administration/
 ---
 
-<h2>General Services Administration</h2>
+<div class="content pure-g">
 
-<section class="agency">
+<header class="pure-u-1">
+  <h2>General Services Administration</h2>
+</header>
 
+<section class="request agency pure-u-1">
   <p>
-    The General Services Administration (GSA) helps manage and support the basic functioning of federal agencies. The GSA supplies products and communications for U.S. government offices, provides transportation and office space to federal employees, and develops government-wide cost-minimizing policies, and other management tasks.
+    <a href="http://www.gsa.gov">The General Services Administration (GSA)</a> helps manage and support the basic functioning of federal agencies. The GSA supplies products and communications for U.S. government offices, provides transportation and office space to federal employees, and develops government-wide cost-minimizing policies, and other management tasks.
   </p>
 
   <p>
     Common FOIA requests from GSA include <strong>federal contracts</strong>, <strong>purchase card use</strong>, and <strong>government forms</strong>.
   </p>
 
-  <!-- <p>
-    You may not need to make a FOIA request for the information you're looking for. The General Services Administration has:
-  </p>
-
-  <ul>
-    <li>
-      <a href="http://catalog.data.gov/organization/gsa-gov">public datasets catalogued on Data.gov</a>
-    </li>
-    <li>
-      <a href="/open/agencies/gsa/">public records already released through FOIA</a>
-    </li>
-  </ul> -->
-
-  <!--<form class="search pure-form" method="get" action="/agency/gsa/">
-    <input type="search" class="search" name="query" placeholder="Search GSA's data..." />
-    <input type="hidden" name="agency" value="gsa" />
-  </form>-->
-
 </section>
 
-<section class="request">
 
-  <form class="pure-form" method="get" action="/request-made/">
+<!-- request form, shown by default -->
 
-    <fieldset>
-      <!-- <legend>
-        You need to provide your name and a contact email address.
-      </legend> -->
-      <input type="text" placeholder="First name" />
-      <input type="text" placeholder="Last name" />
-      <input type="text" placeholder="Email address" />
-    </fieldset>
+<section class="request form pure-u-1">
 
-    <fieldset>
-      <legend>Describe the records you are requesting.</legend>
-      <textarea class="request" name="body"></textarea>
-    </fieldset>
+  <form class="request pure-form" method="get" action="#">
+    <input type="hidden" class="agency_agency" name="agency" value="general-services-administration" />
+    <input type="hidden" class="agency_office" name="office" value="headquarters" />
+    <input type="hidden" class="agency_name" name="agency_name" value="General Services Administration" />
+
+    {% include request/basic.html %}
 
     <fieldset>
       <legend>If your request relates to a specific GSA contract, enter the contract number. (optional)</legend>
-      GS-<input type="text" name="gsa[contract]" />
+      <input type="text" class="pure-u-1 agency_fields_contract" name="agency_fields[contract]" placeholder="GS-"/>
     </fieldset>
 
     <fieldset>
       <legend>If your request relates to a specific GSA region, choose the region or choose your state. (optional)</legend>
 
-      <select name="gsa[region]">
-        <option value="" selected>GSA region</option>
+      <select class="pure-u-1 agency_fields_region" name="agency_fields[region]">
+        <option value="" selected>-- GSA region --</option>
         <option value="1A">New England Region (1A)</option>
         <option value="2A">Northeast and Caribbean Region (2A)</option>
         <option value="3A">Mid-Atlantic Region (3A)</option>
@@ -77,20 +57,45 @@ permalink: /agency/gsa/
         <option value="Central">Central Office (00)</option>
       </select>
 
-      <select name="gsa[state]">
-        <option value="" selected>State (optional)</option>
-        <option value="AK">Alaska</option>
-        <option value="...">...</option>
-      </select>
-    </fieldset>
+    {% include request/fees.html %}
 
-    <fieldset>
-      I'll pay up to
-      $<input type="text" class="upto" name="upto" value="0" />
-      in request processing fees. If it's higher than <span class="fee-amount">$0</span>, stop and inform me before continuing.
-    </fieldset>
+    <div class="request error">
+      There was an error submitting your request. Please fill out all the required fields above, and try again.
+    </div>
 
     <input type="submit" class="pure-button pure-button-primary" value="Submit Request" />
   </form>
 
 </section>
+
+<!-- hidden by default, request success -->
+<section class="request success pure-u-1">
+  <h3>
+    You've successfully submitted your request!
+  </h3>
+
+  <p>
+    We've emailed a copy of your request to <a id="requester-email"></a>.
+  </p>
+
+  <p>
+    Your request's tracking ID is <span id="tracking-number"></span>.
+  </p>
+
+  <p>
+    You should receive a status update from the <span class="agency-name"></span> by email within 20 working days.
+  </p>
+
+  <p>
+    To reach the FOIA office of the <span class="agency-name"></span> directly, contact:
+
+    <blockquote>
+      Audrey Corbett Brooks<br/>
+      (202) 205-5912<br/>
+      <a href="mailto:gsa.foia@gsa.gov">gsa.foia@gsa.gov</a>
+    </blockquote>
+  </p>
+</section>
+</div>
+
+{% include request/script.html %}

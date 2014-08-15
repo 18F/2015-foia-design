@@ -1,0 +1,27 @@
+<nav class="content pure-menu pure-menu-open pure-menu-horizontal">
+  <ul>
+    <li
+      {% if page.url == "/" %}
+      class="pure-menu-selected"
+      {% endif %}
+      }
+    ><a href="/">Home</a></li>
+
+    <li
+      {% if page.url == "/request/" %}
+      class="pure-menu-selected"
+      {% elsif page.url == "/request/general-services-administration/" %}
+      class="pure-menu-selected"
+      {% elsif page.url == "/request/office-of-science-and-technology-policy/" %}
+      class="pure-menu-selected"
+      {% endif %}
+      }
+    ><a href="/request/">Request</a></li>
+    <li
+      {% if page.url == "/learn/" %}
+      class="pure-menu-selected"
+      {% endif %}
+      }
+    ><a href="/learn/">What is FOIA?</a></li>
+  </ul>
+</nav>
