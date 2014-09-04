@@ -1,4 +1,6 @@
-## foia-hub
+## foia-hub (Retired)
+
+*Note: This repo has been retired. FOIA design components will live in [18f/foia](http://github.com/18f/foia)). Issues will be in [18f/foia-hub](http://github.com/18f/foia-hub)*
 
 A user-facing FOIA hub.
 
